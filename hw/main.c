@@ -31,6 +31,7 @@ void load_patch();
 // osc handlers
 void error(int num, const char *m, const char *path);
 int led_handler(const char *path, const char *types, lo_arg ** argv, int argc, void *data, void *user_data);
+int leds_handler(const char *path, const char *types, lo_arg ** argv, int argc, void *data, void *user_data);
 int ledall_handler(const char *path, const char *types, lo_arg ** argv, int argc, void *data, void *user_data);
 int led1_handler(const char *path, const char *types, lo_arg ** argv, int argc, void *data, void *user_data);
 int led2_handler(const char *path, const char *types, lo_arg ** argv, int argc, void *data, void *user_data);
@@ -87,6 +88,7 @@ int main() {
     // setup osc server and add led method
     lo_server_thread st = lo_server_thread_new("4001", error);
     lo_server_thread_add_method(st, "/led", "iiii", led_handler, NULL);
+    lo_server_thread_add_method(st, "/leds", "iiiiiiiiiiiiiii", leds_handler, NULL);
     lo_server_thread_add_method(st, "/ledall", "iii", ledall_handler, NULL);
     lo_server_thread_add_method(st, "/led1", "i", led1_handler, NULL);
     lo_server_thread_add_method(st, "/led2", "i", led2_handler, NULL);
@@ -203,6 +205,32 @@ int ledall_handler(const char *path, const char *types, lo_arg ** argv, int argc
     return 0;
 }
 
+int leds_handler(const char *path, const char *types, lo_arg ** argv, int argc, void *data, void *user_data) {
+    
+    data_pi[14] = argv[0]->i;
+    data_pi[13] = argv[1]->i;
+    data_pi[12] = argv[2]->i;
+        
+    data_pi[11] = argv[3]->i;
+    data_pi[10] = argv[4]->i;
+    data_pi[9] = argv[5]->i;
+     
+    data_pi[8] = argv[6]->i;
+    data_pi[7] = argv[7]->i;
+    data_pi[6] = argv[8]->i;
+     
+    data_pi[5] = argv[9]->i;
+    data_pi[4] = argv[10]->i;
+    data_pi[3] = argv[11]->i;
+     
+    data_pi[2] = argv[12]->i;
+    data_pi[1] = argv[13]->i;
+    data_pi[0] = argv[14]->i;
+       
+    i2c_write(&i2c, data_pi, DATA_PI_SIZE);
+    return 0;
+
+}
 
 int led_handler(const char *path, const char *types, lo_arg ** argv, int argc, void *data, void *user_data) {
     uint8_t led_num = argv[0]->i;
