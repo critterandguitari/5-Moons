@@ -1,4 +1,4 @@
-#N canvas 192 25 1248 764 12;
+#N canvas 192 25 1248 764 10;
 #X obj 163 507 s reled;
 #X obj 521 483 s rec-en;
 #X obj 510 295 t b b b b;
