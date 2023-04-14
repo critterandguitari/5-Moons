@@ -46,11 +46,11 @@ struct i2c_dev i2c;
 // data to and from the peripheral
 #define DATA_PI_SIZE 15
 #define DATA_PO_SIZE 8
-uint8_t data_pi[DATA_PI_SIZE] = {  100,0,0,
-                        0,100,0,
-                        0,100,0,
-                        0,100,0,
-                        0,0,100};
+uint8_t data_pi[DATA_PI_SIZE] = {  1,1,1,
+                                   1,1,1,
+                                   1,1,1,
+                                   1,1,1,
+                                   1,1,1};
 uint8_t data_po[DATA_PO_SIZE] = {0,0,0,0,0,0,0,0}; // 2 byte buttons, 6 knobs
 uint32_t buttons_last[13] = {1,1,1,1, 1,1,1,1, 1,1,1,1, 1};
 int fd;
@@ -320,5 +320,14 @@ void map_led_color(uint8_t color, uint8_t *rgb){
 }
 
 int poweroff_handler(const char *path, const char *types, lo_arg ** argv, int argc, void *data, void *user_data) {
+    
+    uint8_t final_leds[DATA_PI_SIZE] = {  20,0,5,
+                                          20,0,6,
+                                          20,0,7,
+                                          20,0,8,
+                                          20,0,9};
+
+    i2c_write(&i2c, final_leds, DATA_PI_SIZE);
     return 0;
 }
+
