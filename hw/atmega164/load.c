@@ -17,12 +17,12 @@ uint8_t data_po[PO_SIZE] = {0xFF,0xFF,0,0,0,0,0,0};  // byte 0,1 is buttons, rem
 uint8_t debounce_timer[13] = {0,0,0,0,0,0,0,0};
 uint8_t buttons[13] = {1,1,1,1, 1,1,1,1, 1,1,1,1, 1};
 
-// data peripheral input, all leds
-uint8_t data_pi[15] = {  10,0,0,
-                        20,0,0,
-                        30,0,0,
-                        40,0,0,
-                        50,0,0};
+// data peripheral input, all leds, initialize to dim white
+uint8_t data_pi[15] = { 1,1,1,
+                        1,1,1,
+                        1,1,1,
+                        1,1,1,
+                        1,1,1};
 
 extern uint8_t i2c_recv_index;
 extern uint8_t i2c_send_index;
@@ -99,12 +99,16 @@ int main(void) {
     
     sei();
 
-    apa102_set_all_leds(0, 0, 100);delay_ms(50);
-    apa102_set_all_leds(0, 100, 100);delay_ms(50);
-    apa102_set_all_leds(100, 0, 100);delay_ms(50);
-    apa102_set_all_leds(100, 100, 100);delay_ms(50);
-    apa102_set_all_leds(0, 0, 0);delay_ms(50);
-    
+    for (int i = 0; i <50; i++){
+        apa102_set_all_leds(1, 1, i % 50);delay_ms(30);
+    }
+    for (int i = 0; i <50; i++){
+        apa102_set_all_leds(3, 3, i % 50);delay_ms(30);
+    }
+    for (int i = 0; i <50; i++){
+        apa102_set_all_leds(6, 6, i % 50);delay_ms(30);
+    }
+
     uint8_t ms_count = 0;
     uint8_t button_changed = 0;
     for(;;) {

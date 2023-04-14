@@ -1207,8 +1207,8 @@ apa102_set_all_leds:
 	.string	"unsigned char"
 .LASF4:
 	.string	"long unsigned int"
-.LASF16:
-	.string	"/Users/owen1/repos/tracks/interface/mcu-i2c/atmega164"
+.LASF11:
+	.string	"stop_bytes"
 .LASF14:
 	.string	"GNU C99 9.3.0 -mn-flash=1 -mno-skip-bug -mmcu=avr5 -g -Os -std=gnu99 -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections"
 .LASF8:
@@ -1221,8 +1221,6 @@ apa102_set_all_leds:
 	.string	"uint8_t"
 .LASF13:
 	.string	"apa102_transmit_byte"
-.LASF11:
-	.string	"stop_bytes"
 .LASF5:
 	.string	"long long int"
 .LASF3:
@@ -1233,6 +1231,8 @@ apa102_set_all_leds:
 	.string	"signed char"
 .LASF9:
 	.string	"apa102_end"
+.LASF16:
+	.string	"/Users/owen1/repos/5-Moons/hw/atmega164"
 .LASF12:
 	.string	"apa102_start"
 	.ident	"GCC: (Homebrew AVR GCC 9.3.0_3) 9.3.0"

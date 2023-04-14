@@ -1,5 +1,5 @@
 # 1 "load.c"
-# 1 "/Users/owen1/repos/tracks/interface/mcu-i2c/atmega164//"
+# 1 "/Users/owen1/repos/5-Moons/hw/atmega164//"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "load.c"
@@ -480,11 +480,11 @@ uint8_t debounce_timer[13] = {0,0,0,0,0,0,0,0};
 uint8_t buttons[13] = {1,1,1,1, 1,1,1,1, 1,1,1,1, 1};
 
 
-uint8_t data_pi[15] = { 10,0,0,
-                        20,0,0,
-                        30,0,0,
-                        40,0,0,
-                        50,0,0};
+uint8_t data_pi[15] = { 1,1,1,
+                        1,1,1,
+                        1,1,1,
+                        1,1,1,
+                        1,1,1};
 
 extern uint8_t i2c_recv_index;
 extern uint8_t i2c_send_index;
@@ -633,11 +633,15 @@ int main(void) {
 # 100 "load.c"
         ;
 
-    apa102_set_all_leds(0, 0, 100);delay_ms(50);
-    apa102_set_all_leds(0, 100, 100);delay_ms(50);
-    apa102_set_all_leds(100, 0, 100);delay_ms(50);
-    apa102_set_all_leds(100, 100, 100);delay_ms(50);
-    apa102_set_all_leds(0, 0, 0);delay_ms(50);
+    for (int i = 0; i <50; i++){
+        apa102_set_all_leds(1, 1, i % 50);delay_ms(30);
+    }
+    for (int i = 0; i <50; i++){
+        apa102_set_all_leds(3, 3, i % 50);delay_ms(30);
+    }
+    for (int i = 0; i <50; i++){
+        apa102_set_all_leds(6, 6, i % 50);delay_ms(30);
+    }
 
     uint8_t ms_count = 0;
     uint8_t button_changed = 0;
@@ -663,16 +667,16 @@ int main(void) {
 
                 if (i < 8) {
                     tmp = 
-# 131 "load.c" 3
+# 135 "load.c" 3
                          (*(volatile uint8_t *)((0x09) + 0x20))
-# 131 "load.c"
+# 135 "load.c"
                              ;
                     tmp = (tmp >> i) & 1;
                 } else {
                     tmp = 
-# 134 "load.c" 3
+# 138 "load.c" 3
                          (*(volatile uint8_t *)((0X03) + 0x20))
-# 134 "load.c"
+# 138 "load.c"
                              ;
                     tmp &= 0x1F;
                     tmp = (tmp >> (i - 8)) & 1;
@@ -699,9 +703,9 @@ int main(void) {
             data_po[0] = tmp0;
             data_po[1] = tmp1;
             
-# 159 "load.c" 3
+# 163 "load.c" 3
            (*(volatile uint8_t *)((0x08) + 0x20))
-# 159 "load.c"
+# 163 "load.c"
            |=(1<<2);;
             button_changed = 0;
         }
