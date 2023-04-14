@@ -480,11 +480,11 @@ uint8_t debounce_timer[13] = {0,0,0,0,0,0,0,0};
 uint8_t buttons[13] = {1,1,1,1, 1,1,1,1, 1,1,1,1, 1};
 
 
-uint8_t data_pi[15] = { 1,1,1,
-                        1,1,1,
-                        1,1,1,
-                        1,1,1,
-                        1,1,1};
+uint8_t data_pi[15] = { 0,0,0,
+                        0,0,0,
+                        0,0,0,
+                        0,0,0,
+                        0,0,0};
 
 extern uint8_t i2c_recv_index;
 extern uint8_t i2c_send_index;

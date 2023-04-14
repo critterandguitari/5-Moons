@@ -912,11 +912,11 @@ main:
 .LFE8:
 	.size	main, .-main
 .global	data_pi
-	.section	.data.data_pi,"aw"
+	.section	.bss.data_pi,"aw",@nobits
 	.type	data_pi, @object
 	.size	data_pi, 15
 data_pi:
-	.ascii	"\001\001\001\001\001\001\001\001\001\001\001\001\001\001\001"
+	.zero	15
 .global	buttons
 	.section	.data.buttons,"aw"
 	.type	buttons, @object
