@@ -13,7 +13,7 @@
 #X obj 359 197 t b b;
 #X obj 159 231 r t\$1stop;
 #X msg 71 486 0;
-#X obj 249 223 r stop-all;
+#X obj 263 215 r stop-all;
 #X msg 521 466 symbol /sdcard/songs/\$1;
 #X obj 351 403 delay 15;
 #X obj 969 555 readsf~;
@@ -125,6 +125,7 @@
 #X obj 861 105 s t\$1stop-play;
 #X obj 1200 171 r t\$1stop-play;
 #X obj 529 396 t b b;
+#X obj 221 187 r stop-all-recordings;
 #X connect 0 0 1 0;
 #X connect 2 0 111 0;
 #X connect 3 0 10 0;
@@ -252,3 +253,4 @@
 #X connect 121 0 107 0;
 #X connect 122 0 6 0;
 #X connect 122 1 7 0;
+#X connect 123 0 106 0;
