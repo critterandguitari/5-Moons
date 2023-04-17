@@ -180,7 +180,7 @@ void load_patch() {
     printf("remount sdcard...\n");
     system("umount /sdcard");
     system("mount /dev/mmcblk1p2 /sdcard");
-    system("( cd /sdcard/pd ; pd -nogui -rt -audiobuf 8 mother.pd main.pd ) &");
+    system("( cd /sdcard/pd ; pd -nogui -rt -audiobuf 8 mother.pd main.pd &> /tmp/pd.log ) &");
 
 }
 
