@@ -1,4 +1,4 @@
-#N canvas 239 50 821 814 10;
+#N canvas 239 50 821 787 10;
 #X declare -path lib;
 #N canvas 174 61 819 572 track-it 0;
 #X obj 331 461 outlet~;
@@ -37,8 +37,8 @@
 #X obj 175 351 adc~;
 #X obj 272 645 dac~;
 #X obj 291 307 sel 1;
-#X obj 291 332 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 291 332 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 267 459 *~;
 #X obj 291 281 r key4;
 #X obj 358 404 *;
@@ -150,11 +150,12 @@
 #X obj 89 108 sel 0 1 2;
 #X obj 397 161 t b b;
 #X text 731 85 only allow during play or stop \, not bounce down;
-#X obj 397 244 t f f b;
-#X obj 391 278 delay 6;
+#X obj 362 270 delay 6;
 #X obj 465 289 s mute-dac;
 #X obj 434 382 t b b;
 #X obj 358 422 s unmute-dac;
+#X obj 398 294 i;
+#X obj 397 244 t b f f b;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 13 0;
@@ -170,12 +171,12 @@
 #X connect 15 0 7 0;
 #X connect 18 0 19 0;
 #X connect 19 0 37 0;
-#X connect 20 0 43 0;
+#X connect 20 0 48 0;
 #X connect 21 0 25 0;
 #X connect 23 0 20 0;
 #X connect 25 0 24 0;
 #X connect 25 1 27 0;
-#X connect 26 1 46 0;
+#X connect 26 1 45 0;
 #X connect 28 0 32 0;
 #X connect 28 1 4 0;
 #X connect 28 2 5 0;
@@ -198,12 +199,14 @@
 #X connect 40 1 28 0;
 #X connect 41 0 23 0;
 #X connect 41 1 22 0;
-#X connect 43 0 44 0;
-#X connect 43 1 21 1;
-#X connect 43 2 45 0;
-#X connect 44 0 31 0;
-#X connect 46 0 47 0;
-#X connect 46 1 21 0;
+#X connect 43 0 47 0;
+#X connect 45 0 46 0;
+#X connect 45 1 21 0;
+#X connect 47 0 31 0;
+#X connect 48 0 43 0;
+#X connect 48 1 47 1;
+#X connect 48 2 21 1;
+#X connect 48 3 44 0;
 #X restore 139 139 pd song-select;
 #N canvas 47 383 703 328 init 0;
 #X msg 316 171 1;
@@ -273,7 +276,7 @@
 #X connect 18 7 7 0;
 #X connect 18 8 13 0;
 #X restore 139 29 pd init;
-#N canvas 96 158 1032 611 osc 1;
+#N canvas 96 158 1032 611 osc 0;
 #N canvas 313 299 485 364 oscio 0;
 #X obj 95 174 packOSC;
 #X obj 252 154 udpreceive;
@@ -369,7 +372,7 @@
 #X connect 33 2 34 0;
 #X restore 139 50 pd osc;
 #X obj 27 29 declare -path lib;
-#N canvas 131 114 1070 756 bounce-down 0;
+#N canvas 79 25 1070 756 bounce-down 0;
 #X obj 422 -11 sel 1;
 #X obj 470 196 + 1;
 #X obj 519 344 i;
