@@ -195,7 +195,7 @@ void load_patch() {
         system("mount /dev/mmcblk1p2 /sdcard");
         
         printf("run main patch\n");
-        system("( cd /sdcard/pd ; pd -nogui -rt -audiobuf 8 mother.pd main.pd &> /tmp/pd.log ) &");
+        system("( cd /sdcard/pd ; pd -nogui -rt -audiobuf 8 main.pd &> /tmp/pd.log ) &");
     }
     
     // usb drive mode
@@ -213,6 +213,7 @@ void load_patch() {
         system("modprobe g_mass_storage file=/dev/mmcblk1p2 stall=0 removable=1");
     
         printf("start test patch \n");
+        system("( cd /home/root/hw/hwtest ; pd -nogui -rt -audiobuf 8 main.pd &> /tmp/pd.log ) &");
     }
 }
 
