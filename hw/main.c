@@ -57,9 +57,11 @@ int fd;
 struct pollfd pfd;
 uint8_t int_pin;
 int ret;
+int mode = 0;  // mode of operation, 0 = normal / play mode, 1 = USB file transfer / test mode 
+
+lo_address t;
 
 int main() {
-
 
 	//Enable gpio8, input, interrupt rising edge
 	fd = open("/sys/class/gpio/export", O_WRONLY);
@@ -82,8 +84,7 @@ int main() {
     printf("opened \n");
 
     // setup osc sender 
-    lo_address t = lo_address_new("localhost", "4000");
-    //lo_address t = lo_address_new("192.168.1.124", "4000");
+    t = lo_address_new("localhost", "4000");
 
     // setup osc server and add led method
     lo_server_thread st = lo_server_thread_new("4001", error);
@@ -102,7 +103,9 @@ int main() {
     i2c_write(&i2c, data_pi, DATA_PI_SIZE);
 
     timer_reset();
-    
+   
+    mode = 0;
+
     //start the patch
     load_patch();
 
@@ -167,21 +170,50 @@ int main() {
 
 void check_for_reload(){
     if(!buttons_last[8] && !buttons_last[9] && !buttons_last[10] && !buttons_last[11] && !buttons_last[12]){
+        mode++;
+        mode &= 0x1;
+
         load_patch();
     }
 }
 
 void load_patch() {
     printf("(re)loading patch \n");
+    
+    // play mode
+    if (mode == 0) {
+        printf("signal pd \n");
+        lo_send(t, "/quitpd", "i", 1);
+        usleep(120000); 
+        system("killall pd");
+        
+        printf("disable usb file transfer mode...\n");
+        system("rmmod g_mass_storage");
+        
+        printf("remount sdcard...\n");
+        system("umount /sdcard");
+        system("mount /dev/mmcblk1p2 /sdcard");
+        
+        printf("run main patch\n");
+        system("( cd /sdcard/pd ; pd -nogui -rt -audiobuf 8 mother.pd main.pd &> /tmp/pd.log ) &");
+    }
+    
+    // usb drive mode
+    else if (mode == 1){
+        printf("signal pd \n");
+        lo_send(t, "/quitpd", "i", 1);
+        usleep(120000); 
+        system("killall pd");
 
-    printf("signal pd \n");
-    system("killall pd");
-
-    printf("remount sdcard...\n");
-    system("umount /sdcard");
-    system("mount /dev/mmcblk1p2 /sdcard");
-    system("( cd /sdcard/pd ; pd -nogui -rt -audiobuf 8 mother.pd main.pd &> /tmp/pd.log ) &");
-
+        printf("unmount sdcard...\n");
+        system("umount /sdcard");
+        
+        printf("start usb file transfer mode \n");
+        system("rmmod g_mass_storage");
+        system("modprobe g_mass_storage file=/dev/mmcblk1p2 stall=0 removable=1");
+    
+        printf("start test patch \n");
+    }
 }
 
 void error(int num, const char *msg, const char *path) {
