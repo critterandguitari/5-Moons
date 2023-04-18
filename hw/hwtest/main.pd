@@ -1,7 +1,7 @@
-#N canvas 239 25 821 778 10;
+#N canvas 239 50 982 792 10;
 #X declare -path lib;
-#X obj 69 581 adc~;
-#X obj 69 612 dac~;
+#X obj 144 298 adc~;
+#X obj 170 428 dac~;
 #N canvas 47 383 703 328 init 0;
 #X obj 168 19 loadbang;
 #X msg 148 124 \; pd dsp 1;
@@ -71,6 +71,8 @@
 #X obj 506 206 print quitting;
 #X obj 379 206 s stop;
 #X text 420 157 stop all and then quit;
+#X obj 523 92;
+#X obj 523 113;
 #X connect 1 0 32 0;
 #X connect 3 0 2 0;
 #X connect 4 0 6 0;
@@ -105,24 +107,39 @@
 #X connect 33 0 30 0;
 #X connect 33 1 35 0;
 #X connect 33 2 34 0;
+#X connect 37 0 38 0;
 #X restore 139 50 pd osc;
 #X obj 27 29 declare -path lib;
 #X obj 1061 536 r loop-en;
 #X obj 377 326 s oscOut;
 #X obj 383 22 loadbang;
-#X msg 316 228 send /leds 10 0 0 10 0 0 10 0 0 10 0 0 10 0 0, f 47
+#X msg 357 219 send /leds 10 0 0 10 0 0 10 0 0 10 0 0 10 0 0, f 47
 ;
 #X obj 383 51 metro 555;
 #X obj 366 105 i;
 #X obj 366 126 + 1;
 #X obj 366 149 % 3;
 #X obj 366 170 sel 0 1 2;
-#X msg 355 273 send /leds 0 0 10 0 0 10 0 0 10 0 0 10 0 0 10, f 47
+#X msg 396 264 send /leds 0 0 10 0 0 10 0 0 10 0 0 10 0 0 10, f 47
 ;
-#X msg 335 250 send /leds 0 10 0 0 10 0 0 10 0 0 10 0 0 10 0, f 47
+#X msg 376 241 send /leds 0 10 0 0 10 0 0 10 0 0 10 0 0 10 0, f 47
 ;
-#X connect 0 0 1 0;
-#X connect 0 1 1 1;
+#X obj 209 299 catch~ out;
+#X obj 357 374 test-key key1 500;
+#X obj 358 398 test-key key2 500;
+#X obj 359 423 test-key key3 500;
+#X obj 357 452 test-key key5 500;
+#X obj 356 476 test-key key6 500;
+#X obj 356 499 test-key key7 500;
+#X obj 356 523 test-key key8 500;
+#X obj 178 390 *~ 0.1;
+#X obj 549 393 knob-test knob1 key9;
+#X obj 548 416 knob-test knob2 key10;
+#X obj 548 440 knob-test knob3 key11;
+#X obj 549 462 knob-test knob4 key12;
+#X obj 549 484 knob-test knob5 key13;
+#X obj 552 505 knob-test knob6 key4;
+#X connect 0 0 24 0;
 #X connect 7 0 9 0;
 #X connect 8 0 6 0;
 #X connect 9 0 10 0;
@@ -135,3 +152,6 @@
 #X connect 13 2 14 0;
 #X connect 14 0 6 0;
 #X connect 15 0 6 0;
+#X connect 16 0 24 0;
+#X connect 24 0 1 0;
+#X connect 24 0 1 1;
