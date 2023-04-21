@@ -1,6 +1,6 @@
-#N canvas 239 50 982 792 10;
+#N canvas 239 50 982 770 10;
 #X declare -path lib;
-#X obj 144 298 adc~;
+#X obj 115 348 adc~;
 #X obj 170 428 dac~;
 #N canvas 47 383 703 328 init 0;
 #X obj 168 19 loadbang;
@@ -139,7 +139,8 @@
 #X obj 549 462 knob-test knob4 key12;
 #X obj 549 484 knob-test knob5 key13;
 #X obj 552 505 knob-test knob6 key4;
-#X connect 0 0 24 0;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
 #X connect 7 0 9 0;
 #X connect 8 0 6 0;
 #X connect 9 0 10 0;
