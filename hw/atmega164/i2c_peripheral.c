@@ -7,9 +7,9 @@ uint8_t i2c_recv_index = 0;
 uint8_t i2c_send_index = 0;
 
 static void (*i2c_recv)(uint8_t);
-static void (*i2c_req)();
+static void (*i2c_req)(void);
 
-void i2c_setCallbacks(void (*recv)(uint8_t), void (*req)())
+void i2c_setCallbacks(void (*recv)(uint8_t), void (*req)(void))
 {
   i2c_recv = recv;
   i2c_req = req;

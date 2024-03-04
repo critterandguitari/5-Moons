@@ -505,27 +505,27 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x106d
+.debug_info     0x0000000000000000     0x1067
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x6cc /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/../../../../../../avr/lib/avr5/crtatmega164p.o
  .debug_info    0x00000000000006cc      0x4f0 load.o
  .debug_info    0x0000000000000bbc      0x2c1 apa102.o
- .debug_info    0x0000000000000e7d      0x158 i2c_peripheral.o
- .debug_info    0x0000000000000fd5       0x26 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_exit.o)
- .debug_info    0x0000000000000ffb       0x26 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_copy_data.o)
- .debug_info    0x0000000000001021       0x26 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_clear_bss.o)
- .debug_info    0x0000000000001047       0x26 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_umulhisi3.o)
+ .debug_info    0x0000000000000e7d      0x152 i2c_peripheral.o
+ .debug_info    0x0000000000000fcf       0x26 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_exit.o)
+ .debug_info    0x0000000000000ff5       0x26 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_copy_data.o)
+ .debug_info    0x000000000000101b       0x26 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_clear_bss.o)
+ .debug_info    0x0000000000001041       0x26 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_umulhisi3.o)
 
-.debug_abbrev   0x0000000000000000      0xaec
+.debug_abbrev   0x0000000000000000      0xacd
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x66e /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/../../../../../../avr/lib/avr5/crtatmega164p.o
- .debug_abbrev  0x000000000000066e      0x1db load.o
- .debug_abbrev  0x0000000000000849      0x131 apa102.o
- .debug_abbrev  0x000000000000097a      0x122 i2c_peripheral.o
- .debug_abbrev  0x0000000000000a9c       0x14 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_exit.o)
- .debug_abbrev  0x0000000000000ab0       0x14 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_copy_data.o)
- .debug_abbrev  0x0000000000000ac4       0x14 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_clear_bss.o)
- .debug_abbrev  0x0000000000000ad8       0x14 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_umulhisi3.o)
+ .debug_abbrev  0x000000000000066e      0x1c1 load.o
+ .debug_abbrev  0x000000000000082f      0x131 apa102.o
+ .debug_abbrev  0x0000000000000960      0x11d i2c_peripheral.o
+ .debug_abbrev  0x0000000000000a7d       0x14 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_exit.o)
+ .debug_abbrev  0x0000000000000a91       0x14 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_copy_data.o)
+ .debug_abbrev  0x0000000000000aa5       0x14 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_clear_bss.o)
+ .debug_abbrev  0x0000000000000ab9       0x14 /usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.3.0/avr5/libgcc.a(_umulhisi3.o)
 
 .debug_line     0x0000000000000000     0x1236
  *(.debug_line .debug_line.* .debug_line_end)

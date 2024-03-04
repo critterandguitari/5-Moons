@@ -57,7 +57,7 @@ i2c_received:
 	.type	i2c_requested, @function
 i2c_requested:
 .LFB4:
-	.loc 1 36 22 is_stmt 1 view -0
+	.loc 1 36 26 is_stmt 1 view -0
 	.cfi_startproc
 /* prologue: function */
 /* frame size = 0 */
@@ -951,10 +951,10 @@ data_po:
 	.long	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.long	.LASF32
-	.byte	0xc
 	.long	.LASF33
+	.byte	0xc
 	.long	.LASF34
+	.long	.LASF35
 	.long	.Ldebug_ranges0+0x60
 	.long	0
 	.long	.Ldebug_line0
@@ -1078,7 +1078,7 @@ data_po:
 	.byte	0x10
 	.long	0x2c
 	.uleb128 0x9
-	.long	.LASF35
+	.long	.LASF36
 	.byte	0x1
 	.byte	0x4a
 	.byte	0x5
@@ -1451,7 +1451,7 @@ data_po:
 	.byte	0x9c
 	.long	0x41c
 	.uleb128 0x17
-	.long	.LASF36
+	.long	.LASF37
 	.byte	0x1
 	.byte	0x2d
 	.byte	0x18
@@ -1472,8 +1472,8 @@ data_po:
 	.long	.LLST2
 	.long	.LVUS2
 	.byte	0
-	.uleb128 0x18
-	.long	.LASF37
+	.uleb128 0x15
+	.long	.LASF24
 	.byte	0x1
 	.byte	0x24
 	.byte	0x6
@@ -1482,7 +1482,7 @@ data_po:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x456
-	.uleb128 0x19
+	.uleb128 0x18
 	.long	0x481
 	.long	.LBI4
 	.byte	.LVU18
@@ -1491,14 +1491,14 @@ data_po:
 	.byte	0x1
 	.byte	0x27
 	.byte	0x5
-	.uleb128 0x1a
+	.uleb128 0x19
 	.long	0x48e
 	.long	.LLST1
 	.long	.LVUS1
 	.byte	0
 	.byte	0
 	.uleb128 0x15
-	.long	.LASF24
+	.long	.LASF25
 	.byte	0x1
 	.byte	0x1e
 	.byte	0x6
@@ -1507,7 +1507,7 @@ data_po:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x481
-	.uleb128 0x1b
+	.uleb128 0x1a
 	.long	.LASF38
 	.byte	0x1
 	.byte	0x1e
@@ -1516,59 +1516,59 @@ data_po:
 	.long	.LLST0
 	.long	.LVUS0
 	.byte	0
-	.uleb128 0x1c
+	.uleb128 0x1b
 	.long	.LASF39
 	.byte	0x2
 	.byte	0xb
 	.byte	0x2c
 	.byte	0x3
 	.long	0x49b
-	.uleb128 0x1d
+	.uleb128 0x1c
 	.long	.LASF40
 	.byte	0x2
 	.byte	0xb
 	.byte	0x45
 	.long	0x2c
 	.byte	0
-	.uleb128 0x1e
-	.long	.LASF25
-	.long	.LASF25
+	.uleb128 0x1d
+	.long	.LASF26
+	.long	.LASF26
 	.byte	0x4
 	.byte	0xf
 	.byte	0x6
-	.uleb128 0x1e
-	.long	.LASF26
-	.long	.LASF26
+	.uleb128 0x1d
+	.long	.LASF27
+	.long	.LASF27
 	.byte	0x4
 	.byte	0xa
 	.byte	0x6
-	.uleb128 0x1e
-	.long	.LASF27
-	.long	.LASF27
+	.uleb128 0x1d
+	.long	.LASF28
+	.long	.LASF28
 	.byte	0x2
 	.byte	0x9
 	.byte	0x6
-	.uleb128 0x1e
-	.long	.LASF28
-	.long	.LASF28
+	.uleb128 0x1d
+	.long	.LASF29
+	.long	.LASF29
 	.byte	0x2
 	.byte	0x7
 	.byte	0x6
-	.uleb128 0x1e
-	.long	.LASF29
-	.long	.LASF29
+	.uleb128 0x1d
+	.long	.LASF30
+	.long	.LASF30
 	.byte	0x4
 	.byte	0xe
 	.byte	0x6
-	.uleb128 0x1e
-	.long	.LASF30
-	.long	.LASF30
+	.uleb128 0x1d
+	.long	.LASF31
+	.long	.LASF31
 	.byte	0x4
 	.byte	0xc
 	.byte	0x6
-	.uleb128 0x1e
-	.long	.LASF31
-	.long	.LASF31
+	.uleb128 0x1d
+	.long	.LASF32
+	.long	.LASF32
 	.byte	0x4
 	.byte	0xd
 	.byte	0x6
@@ -1899,31 +1899,6 @@ data_po:
 	.byte	0
 	.byte	0
 	.uleb128 0x18
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x6
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2117
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x19
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -1944,7 +1919,7 @@ data_po:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x1a
+	.uleb128 0x19
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -1955,7 +1930,7 @@ data_po:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x1b
+	.uleb128 0x1a
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -1974,7 +1949,7 @@ data_po:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x1c
+	.uleb128 0x1b
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -1995,7 +1970,7 @@ data_po:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x1d
+	.uleb128 0x1c
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -2010,7 +1985,7 @@ data_po:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x1e
+	.uleb128 0x1d
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -2418,13 +2393,13 @@ data_po:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF26:
+.LASF27:
 	.string	"apa102_init"
 .LASF17:
 	.string	"button_changed"
 .LASF12:
 	.string	"buttons"
-.LASF27:
+.LASF28:
 	.string	"i2c_setCallbacks"
 .LASF20:
 	.string	"set_leds"
@@ -2436,7 +2411,7 @@ data_po:
 	.string	"read_adc"
 .LASF40:
 	.string	"data"
-.LASF25:
+.LASF26:
 	.string	"apa102_set_all_leds"
 .LASF1:
 	.string	"unsigned char"
@@ -2448,15 +2423,15 @@ data_po:
 	.string	"data_pi"
 .LASF16:
 	.string	"ms_count"
-.LASF28:
+.LASF29:
 	.string	"i2c_init"
 .LASF10:
 	.string	"data_po"
 .LASF11:
 	.string	"debounce_timer"
-.LASF35:
+.LASF36:
 	.string	"main"
-.LASF32:
+.LASF33:
 	.string	"GNU C99 9.3.0 -mn-flash=1 -mno-skip-bug -mmcu=avr5 -g -Os -std=gnu99 -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections"
 .LASF39:
 	.string	"i2c_transmitByte"
@@ -2464,15 +2439,15 @@ data_po:
 	.string	"i2c_recv_index"
 .LASF4:
 	.string	"unsigned int"
-.LASF37:
+.LASF24:
 	.string	"i2c_requested"
 .LASF9:
 	.string	"long long unsigned int"
 .LASF2:
 	.string	"uint8_t"
-.LASF36:
+.LASF37:
 	.string	"dtime"
-.LASF33:
+.LASF34:
 	.string	"load.c"
 .LASF23:
 	.string	"time"
@@ -2482,7 +2457,7 @@ data_po:
 	.string	"i2c_send_index"
 .LASF3:
 	.string	"uint16_t"
-.LASF24:
+.LASF25:
 	.string	"i2c_received"
 .LASF6:
 	.string	"uint32_t"
@@ -2490,15 +2465,15 @@ data_po:
 	.string	"long int"
 .LASF0:
 	.string	"signed char"
-.LASF31:
+.LASF32:
 	.string	"apa102_end"
-.LASF29:
+.LASF30:
 	.string	"apa102_set_led"
 .LASF38:
 	.string	"received_data"
-.LASF34:
+.LASF35:
 	.string	"/Users/owen1/repos/5-Moons/hw/atmega164"
-.LASF30:
+.LASF31:
 	.string	"apa102_start"
 	.ident	"GCC: (Homebrew AVR GCC 9.3.0_3) 9.3.0"
 .global __do_copy_data

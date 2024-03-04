@@ -8,7 +8,6 @@
 #define SCK_HI PORTB|=(1<<7);
 #define SCK_LOW PORTB&=~(1<<7);
 
-#define LED_COUNT 5
 
 void apa102_init(void) {
     

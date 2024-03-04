@@ -33,7 +33,7 @@ void i2c_received(uint8_t received_data) {
     if (i2c_recv_index == 15) i2c_recv_index = 0;
  }
 
-void i2c_requested() {
+void i2c_requested(void) {
     // buttons and knobs being read, so clear the interrupt output
     INT_OFF;
     i2c_transmitByte(data_po[i2c_send_index]);

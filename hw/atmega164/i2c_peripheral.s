@@ -273,7 +273,7 @@ i2c_recv_index:
 	.file 2 "/usr/local/Cellar/avr-gcc@9/9.3.0_3/avr/include/stdint.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.long	0x154
+	.long	0x14e
 	.word	0x4
 	.long	.Ldebug_abbrev0
 	.byte	0x4
@@ -359,22 +359,19 @@ i2c_recv_index:
 	.byte	0x2
 	.long	0x8d
 	.uleb128 0xa
-	.long	0xb7
-	.uleb128 0xb
-	.byte	0
 	.uleb128 0x8
 	.long	.LASF10
 	.byte	0x1
 	.byte	0xa
 	.byte	0xf
-	.long	0xc9
+	.long	0xc3
 	.uleb128 0x5
 	.byte	0x3
 	.long	i2c_req
 	.uleb128 0x9
 	.byte	0x2
 	.long	0xb0
-	.uleb128 0xc
+	.uleb128 0xb
 	.long	.LASF11
 	.byte	0x1
 	.byte	0x25
@@ -383,7 +380,7 @@ i2c_recv_index:
 	.long	.LFE4-.LFB4
 	.uleb128 0x1
 	.byte	0x9c
-	.uleb128 0xd
+	.uleb128 0xc
 	.long	.LASF12
 	.byte	0x1
 	.byte	0x1c
@@ -392,7 +389,7 @@ i2c_recv_index:
 	.long	.LFE3-.LFB3
 	.uleb128 0x1
 	.byte	0x9c
-	.uleb128 0xe
+	.uleb128 0xd
 	.long	.LASF18
 	.byte	0x1
 	.byte	0x12
@@ -401,8 +398,8 @@ i2c_recv_index:
 	.long	.LFE2-.LFB2
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x11e
-	.uleb128 0xf
+	.long	0x118
+	.uleb128 0xe
 	.long	.LASF19
 	.byte	0x1
 	.byte	0x12
@@ -411,7 +408,7 @@ i2c_recv_index:
 	.long	.LLST0
 	.long	.LVUS0
 	.byte	0
-	.uleb128 0x10
+	.uleb128 0xf
 	.long	.LASF20
 	.byte	0x1
 	.byte	0xc
@@ -420,7 +417,7 @@ i2c_recv_index:
 	.long	.LFE1-.LFB1
 	.uleb128 0x1
 	.byte	0x9c
-	.uleb128 0x11
+	.uleb128 0x10
 	.long	.LASF13
 	.byte	0x1
 	.byte	0xc
@@ -433,12 +430,12 @@ i2c_recv_index:
 	.byte	0x69
 	.byte	0x93
 	.uleb128 0x1
-	.uleb128 0x12
+	.uleb128 0x11
 	.string	"req"
 	.byte	0x1
 	.byte	0xc
 	.byte	0x35
-	.long	0xc9
+	.long	0xc3
 	.uleb128 0x6
 	.byte	0x66
 	.byte	0x93
@@ -569,17 +566,12 @@ i2c_recv_index:
 	.byte	0
 	.uleb128 0xa
 	.uleb128 0x15
-	.byte	0x1
-	.uleb128 0x1
-	.uleb128 0x13
+	.byte	0
+	.uleb128 0x27
+	.uleb128 0x19
 	.byte	0
 	.byte	0
 	.uleb128 0xb
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.byte	0
-	.uleb128 0xc
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -604,7 +596,7 @@ i2c_recv_index:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0xc
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -629,7 +621,7 @@ i2c_recv_index:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0xe
+	.uleb128 0xd
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -656,7 +648,7 @@ i2c_recv_index:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0xe
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -675,7 +667,7 @@ i2c_recv_index:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x10
+	.uleb128 0xf
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -700,7 +692,7 @@ i2c_recv_index:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x11
+	.uleb128 0x10
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -717,7 +709,7 @@ i2c_recv_index:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0x11
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3

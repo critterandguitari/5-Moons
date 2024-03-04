@@ -457,7 +457,7 @@ void apa102_set_all_leds(uint8_t r, uint8_t g, uint8_t b);
 
 void i2c_init(uint8_t address);
 void i2c_stop(void);
-void i2c_setCallbacks(void (*recv)(uint8_t), void (*req)());
+void i2c_setCallbacks(void (*recv)(uint8_t), void (*req)(void));
 
 inline void __attribute__((always_inline)) i2c_transmitByte(uint8_t data)
 {
@@ -495,7 +495,7 @@ void i2c_received(uint8_t received_data) {
     if (i2c_recv_index == 15) i2c_recv_index = 0;
  }
 
-void i2c_requested() {
+void i2c_requested(void) {
 
     
 # 38 "load.c" 3
