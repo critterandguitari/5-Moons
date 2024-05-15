@@ -28,6 +28,7 @@ load.o : load.c apa102.c i2c_peripheral.c
 # you need to erase first before loading the program.
 # load (program) the software into the eeprom:
 load: load.hex
+	avrdude -p m164p -c usbtiny -U lfuse:w:0xE2:m -u
 	avrdude -p atmega164p -c usbtiny -U flash:w:load.hex 
 
 #-------------------
